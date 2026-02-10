@@ -180,23 +180,23 @@ void get_ipFromComputer(uint8_t (*ip)[5])
 ////////////////////////////////////////////////////////////////
 void user_help()
 {
-	printf("The Subnetter tool will help you with your daily subnetting challenges.\n");
-	printf("It can also help you practice subnetting by giving you new challenges. \n");
-	printf("It can take in an IP with CIDR to find the following: \n");
-	printf("         -> First IP of the Network\n");
-	printf("         -> Last  IP of the Network\n");
-	printf("         -> Subnet mask\n");
-	printf("         -> Wildcard Bits\n");
-	printf("         -> Number of Possible hosts\n");
+	puts("The Subnetter tool will help you with your daily subnetting challenges.\n"
+		 "It can also help you practice subnetting by giving you new challenges. \n"
+		 "It can take in an IP with CIDR to find the following: \n"
+		 "         -> First IP of the Network\n"
+		 "         -> Last  IP of the Network\n"
+		 "         -> Subnet mask\n"
+		 "         -> Wildcard Bits\n"
+		 "         -> Number of Possible hosts\n"
 	
-	printf("ARGUMENTS:\n");
-	printf(CYN"         --help"RESET"          -> print this help message.\n");
-	printf(CYN"         --practice"RESET"      -> computer generates questions for you to practice.\n");
-	printf(CYN"         --ip "YEL"x.x.x.x/y"RESET"  -> specify an ip-cidr to solve.\n");
-	printf(   "                            EXAMPLE: subnetter --ip 192.168.1.0/24\n");
-	printf(CYN"         --verbose"RESET"       -> Show output in verbose / show more details about the network.\n");
-	printf(CYN"         --ip-range"RESET"      -> Specify two IP to solve.\n");
-	printf(   "                            EXAMPLE: subnetter --ip-range 192.168.0.0 192.168.0.255\n");
+		 "\nARGUMENTS:\n"
+		 CYN"         --help"RESET"          -> print this help message.\n"
+		 CYN"         --practice"RESET"      -> computer generates questions for you to practice.\n"
+		 CYN"         --ip "YEL"x.x.x.x/y"RESET"  -> specify an ip-cidr to solve.\n"
+			"                            EXAMPLE: subnetter --ip 192.168.1.0/24\n"
+		 CYN"         --verbose"RESET"       -> Show output in verbose / show more details about the network.\n"
+		 CYN"         --ip-range"RESET"      -> Specify two IP to solve.\n"
+			"                            EXAMPLE: subnetter --ip-range 192.168.0.0 192.168.0.255\n");
 	
 }
 ////////////////////////////////////////////////////////////////
@@ -342,7 +342,7 @@ uint64_t get_cidrFromRange( uint8_t (*ip1)[5], uint8_t (*ip2)[5])
 	// each ip are same and then returning that value. We use some binary operations. 
 	uint64_t cidr_value = 0;
 	uint32_t compared_result; // in binary, represents which bits of ip1 and ip2 are same, 
-							  // represented by a 1 and which are not represented by a 0. 
+							  // represented by a 0 and which are not represented by a 1. 
 	uint8_t  position = 31;
 	
 	// we use XOR to find which are different represent 1 for different bits 
