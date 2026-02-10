@@ -14,7 +14,7 @@ If you are using for the first time, try using the `--help` argument.
 Also thank you for using or reading this program 😇 
 
 ## How to use : 
-First clone this repo by typing `git clone url` on your terminal.
+First clone this repo by typing `git clone (https://github.com/Oliver-Proto/subnetter.git)` on your terminal.
 
 I don't have any makefiles or so. You will have to compile it with gcc or any compiler of your preference
 
