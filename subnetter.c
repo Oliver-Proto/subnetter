@@ -196,7 +196,7 @@ void user_help()
 			"                            EXAMPLE: subnetter --ip 192.168.1.0/24\n"
 		 CYN"         --verbose"RESET"       -> Show output in verbose / show more details about the network.\n"
 		 CYN"         --ip-range"RESET"      -> Specify two IP to solve.\n"
-			"                            EXAMPLE: subnetter --ip-range 192.168.0.0 192.168.0.255\n"
+			"                            EXAMPLE: subnetter --ip-range 192.168.0.0 192.168.0.255\n");
 	
 }
 ////////////////////////////////////////////////////////////////
